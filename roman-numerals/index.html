@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Roman number converter</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main>
+        <h1>Arabic to Roman Number Converter</h1>
+        <p>
+          Type a number below to convert it to a roman numeral.
+        </p>
+        <div id="converter">
+          <p class="bold-text">Arabic number: </p>
+          <input 
+            type="number" 
+            id="arabic" 
+            name="arabic"
+            min="0"
+            max="100000"
+            placeholder="Type a number here">
+          <p class="bold-text">Roman numeral: </p>
+          <p id="roman"></p>
+        </div>
+    </main>
+	<script src="./script.js"></script>
+  </body>
+</html>
