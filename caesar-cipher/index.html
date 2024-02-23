@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Michalina Szpot">
+    <title>Caesar cipher</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main>
+      <h1>Caesar cipher</h1>
+      <p id="description">
+        Encode or decode a message using Caesar cipher.
+      </p>
+      <div class="flexbox">
+        <!-- Input text -->
+        <div class="box">
+          <p class="box-label">Input message</p>
+          <textarea 
+            id="input" 
+            name="input"
+            maxlength="350" 
+            placeholder="Type your message here"></textarea>
+        </div>
+        <!-- Options -->
+        <div class="box">
+          <p class="box-label">Options</p>
+          <label for="encode">
+            <input type="radio" id="encode" name="mode" value="encode" checked>
+            Encode
+          </label>
+          <label for="decode">
+            <input type="radio" id="decode" name="mode" value="decode">
+            Decode
+          </label>
+          <label for="rot-value">
+            Rotation value: <span id="range-value">13</span>
+          </label>
+          <input 
+            type="range" 
+            id="rot-value" 
+            name="rot-value" 
+            value="13"
+            step="1" 
+            min="0" max="25"
+            onchange="displayRotValue()">
+          <button onclick="applyCipher()">Apply</button>
+        </div>
+        <!-- Output message -->
+        <div class="box">
+          <p class="box-label">Output message</p>
+          <textarea id="output" name="output" disabled></textarea>
+        </div>
+      </div>
+    </main>
+    <script src="./script.js" type="text/javascript"></script>
+  </body>
+</html>
